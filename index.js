@@ -57,7 +57,7 @@ app.put('/api/notes/:id', (request, response) => {
   
   if (body) {
     notes.filter(n => n.id !== id)
-    notes = notes.concat()
+    notes = notes.concat(body)
     response.json(body)
   } else {
     response.status(404).end()
